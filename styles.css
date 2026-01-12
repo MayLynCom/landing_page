@@ -383,6 +383,106 @@ body {
     margin-top: 0.5rem;
 }
 
+/* Formulario */
+.formulario {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-bg);
+}
+
+.formulario-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    padding: 0.85rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-2);
+    color: var(--color-text-primary);
+    font-size: 0.95rem;
+}
+
+.form-field input::placeholder {
+    color: rgba(148, 163, 184, 0.8);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: var(--color-blue);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+}
+
+.form-submit {
+    align-self: center;
+    min-width: 220px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(2, 6, 23, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 200;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    width: min(420px, 90%);
+    background-color: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.modal h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+}
+
 /* Footer */
 .footer {
     background-color: var(--color-surface-1);
@@ -492,6 +592,14 @@ body {
 
     .servico-card {
         padding: 1.5rem;
+    }
+
+    .formulario-wrapper {
+        padding: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer-content {
